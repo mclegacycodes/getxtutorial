@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getxstatemanagement/controller/tap_controller.dart';
 
+import 'first_page.dart';
+
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
 
@@ -54,7 +56,9 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Get.to(() => const FirstPage());
+              },
               child: Container(
                 margin: const EdgeInsets.only(bottom: 20),
                 height: 100,
@@ -64,7 +68,7 @@ class _HomepageState extends State<Homepage> {
                     borderRadius: BorderRadius.circular(16)),
                 child: const Center(
                     child: Text(
-                  "Tap",
+                  "Go to First Page",
                   style: TextStyle(color: Colors.black),
                 )),
               ),
